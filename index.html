@@ -6,14 +6,17 @@
 
     <!-- Import Lato from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <style> 
+
+    <style>
       body {
         font-family: 'Lato', sans-serif;
         background-color: #FAF6F3; /* Ivory/Cream */
         color: #2E2D4D; /* Deep Indigo */
         margin: 0;
         padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       h1 {
@@ -26,7 +29,7 @@
 
       .image-row {
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
 
       .profile-image {
@@ -35,12 +38,14 @@
         object-fit: cover;
         border-radius: 50%;
         border: 4px solid #D87C6E;
+      }
 
-      }.social-icons-row {
+      .social-icons-row {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 1.5rem;
-        margin-top: 2rem;
+        margin: 1.5rem 0 3rem;
       }
 
       .social-icons-row img {
@@ -53,37 +58,84 @@
       .social-icons-row img:hover {
         transform: scale(1.1);
       }
-      .main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
+      .podcast-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .podcast-card {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 90%;
+        max-width: 400px;
+        background: rgba(212, 173, 161, 0.15); /* subtle terracotta tint */
+        color: #2E2D4D;
+        padding: 1rem 1.5rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 500;
+        transition: transform 0.2s ease, background 0.3s ease;
+        backdrop-filter: blur(4px);
+      }
+
+      .podcast-card:hover {
+        transform: translateY(-3px);
+        background: rgba(212, 173, 161, 0.25);
+      }
+
+      .podcast-card img {
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
     </style>
   </head>
 
   <body>
     <h1>Krutika's Links</h1>
 
-    <div class="main-container">
-      <div class="image-row">
-        <img src="./profile-pic.png" alt="Krutika Rao headshot" class="profile-image">
-      </div> <div class="social-icons-row">
-        
-        <div class="item"> <a href="https://www.linkedin.com/in/krutika-rao/ " target="_blank">
-          <img src="czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kNS0xMF8xLnBuZw.webp" alt="LinkedIn">
-        </a></div>
-        <div class="item"><a href="https://www.instagram.com/krutikarao/?hl=en" target="_blank">
-          <img src="Instagram_logo_2016.svg.webp" alt="Instagram">
-        </a></div>
-        <div class="item"><a href="https://nukkadpathshala.in/" target="_blank">
-          <img src="nukkad-pathshala.png" alt="Instagram">
-        </a></div>
-        </a>
-        <div class="item"> </div>
-        <div class="item">  </div>
-        <div class="item">  </div>
-      </di>
+    <div class="image-row">
+      <img src="./profile-pic.png" alt="Krutika Rao headshot" class="profile-image">
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons-row">
+      <a href="https://www.linkedin.com/in/krutika-rao/" target="_blank">
+        <img src="czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kNS0xMF8xLnBuZw.webp" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/krutikarao/?hl=en" target="_blank">
+        <img src="Instagram_logo_2016.svg.webp" alt="Instagram">
+      </a>
+      <a href="https://nukkadpathshala.in/" target="_blank">
+        <img src="nukkad-pathshala.png" alt="Nukkad Pathshala">
+      </a>
+    </div>
+
+    <!-- PODCAST LINKS -->
+    <div class="podcast-links">
+      <a href="https://content.11fs.com/podcasts/fintech-insider" target="_blank" class="podcast-card">
+        <img src="images.png" alt="Fintech Insider Icon">
+        Fintech Insider by 11:FS
+      </a>
+
+      <a href="https://www.thelonelypalette.com/" target="_blank" class="podcast-card">
+        <img src="https://www.thelonelypalette.com/favicon.ico" alt="The Lonely Palette">
+        The Lonely Palette
+      </a>
+
+      <a href="https://99percentinvisible.org/" target="_blank" class="podcast-card">
+        <img src="download (1).png" alt="99% Invisible">
+        99% Invisible
+      </a>
     </div>
   </body>
 </html>
